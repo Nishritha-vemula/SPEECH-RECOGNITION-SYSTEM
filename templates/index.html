@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎤 Speech to Text</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎙️ Speech to Text Converter</h1>
+
+    <form action="/transcribe" method="post" enctype="multipart/form-data" class="upload-form">
+      <label>Select Audio File (.wav):</label>
+      <input type="file" name="file" accept=".wav" required />
+
+      <label>Choose Model:</label>
+      <select name="model" required>
+        <option value="wav2vec">🤖 Wav2Vec2 (Offline)</option>
+        <option value="sr">🌐 Google SpeechRecognition</option>
+      </select>
+
+      <button type="submit">🔍 Transcribe</button>
+    </form>
+
+    {% if transcription %}
+    <div class="result">
+      <h2>✅ Transcription Result</h2>
+      <p><strong>File:</strong> {{ filename }}</p>
+      <audio controls>
+        <source src="{{ audio_url }}" type="audio/wav">
+        Your browser does not support audio.
+      </audio>
+      <p><strong>Text:</strong></p>
+      <pre>{{ transcription }}</pre>
+      <a class="download-button" href="/download/{{ file_id }}">⬇️ Download Transcript</a>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>

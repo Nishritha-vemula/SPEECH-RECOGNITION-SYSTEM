@@ -1,0 +1,109 @@
+/* Reset everything */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full viewport height and width */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #222;
+  font-size: 20px;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container now takes full height, with some padding */
+.container {
+  min-height: 100vh; /* Full viewport height */
+  width: 95vw;       /* 95% of viewport width */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Heading centered and big */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #00695c;
+}
+
+/* Form styling */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.upload-form input[type="file"],
+.upload-form select {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+button {
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  background: #00796b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #004d40;
+}
+
+/* Result styling */
+.result {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #f1f8e9;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  overflow-wrap: break-word;
+}
+
+audio {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+pre {
+  background: #e3f2fd;
+  padding: 1rem;
+  border-left: 5px solid #00695c;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.download-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: #0288d1;
+  color: white;
+  padding: 0.75rem 1.2rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.download-button:hover {
+  background: #01579b;
+}
