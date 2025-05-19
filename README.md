@@ -134,7 +134,7 @@ pip install -r requirements.txt
 
 ##  Output
 
-![Image](https://github.com/user-attachments/assets/fb05aefc-a21c-4760-a90a-abc8f5652833)
+
 
 
 ##  Future Ideas
